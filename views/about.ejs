@@ -38,10 +38,23 @@
     <!-- START INTRO OF 1ST PAGE -->
     <div id="Home" class="bg4 intro">
       <div class="whiteText maxClear">
-        <h1 class="fatFace xxlText">About this resume app</h1>
+        <h1 class="fatFace xxlText">About this portfolio app</h1>
+        <h2>
+          <a href="https://github.com/tjcharm/nodeResume">This apps github</a>
+        </h2>
         <h3 class="mdText">
-          This resume is made with node, hosted on heroku. it uses a basic user
-          authentication.
+          This portfolio is a node.js app, which hosts my personal portfolio. It
+          used express, express-session, mongoose, ejs, and bcrypt.
+        </h3>
+        <h3 class="mdText">
+          Features a basic user-authentication similar to the one in my "login
+          checker" app featured on the home page.
+        </h3>
+        <h3 class="mdText">
+          It is connected to a mongoDB atlas database, stores the usernames and
+          hashed(using bcrypt) passwords, and when the user logs in or creates a
+          account, the app checks if the user exists, and than either logs in or
+          creates a new user account accordlingly.
         </h3>
       </div>
       <div class="blackText"></div>
