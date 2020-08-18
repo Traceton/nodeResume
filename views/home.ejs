@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../public/assets/style.css" />
+    <link rel="stylesheet" href="../public/assets/style2.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traceton J Timmerman</title>
+  </head>
+  <body>
+    <!-- START NAVBAR -->
+    <div class="navBar">
+      <% if (data.username == "") { %>
+      <h2><a href="/login">Login</a></h2>
+      <h2><a href="/createAccount">Create Account</a></h2>
+
+      <% } %> <% if (data.username != "") { %>
+      <form class="main" method="post" action="/logout">
+        <input id="logout" type="submit" value="<%= data.username %>" />
+      </form>
+      <% } %>
+    </div>
+    <!-- END NAVBAR -->
+    <!-- START INTRO OF 1ST PAGE -->
+    <div id="Home" class="bg3 intro">
+      <div class="whiteText maxClear">
+        <h3 class="mdText">Hey, I'm</h3>
+        <h1 class="fatFace xxlText">Traceton Timmerman</h1>
+      </div>
+      <div class="blackText"></div>
+    </div>
+    <!-- END INTRO OF 1ST PAGE -->
+    <!-- START MAIN OF 1ST PAGE -->
+    <div class="main smText">
+      <h2>Here's my work</h2>
+      <h3>
+        <a href="/about">Node js resume with authentication</a>
+      </h3>
+      <a href="/about"
+        ><img id="toDoImg" src="../public/photos/resumeEs6.png" alt=""
+      /></a>
+
+      <h3>
+        <a href="https://tjcharm.github.io/ToDoList/"
+          >List creator with local storage</a
+        >
+      </h3>
+      <a href="https://tjcharm.github.io/ToDoList/"
+        ><img id="toDoImg" src="../public/photos/todo.png" alt=""
+      /></a>
+      <h3>
+        <a href="https://tjcharm.github.io/speedBall/">Basic javascript game</a>
+      </h3>
+      <a href="https://tjcharm.github.io/speedBall/"
+        ><img id="speedBallImg" src="../public/photos/speedBall.png" alt=""
+      /></a>
+      <h3>
+        <a href="https://tjcharm.github.io/loginChecker/"
+          >Javascript User Authentication</a
+        >
+      </h3>
+      <a href="https://node-auth-check.herokuapp.com/users/home"
+        ><img
+          id="loginCheckerImg"
+          src="../public/photos/loginChecker.png"
+          alt=""
+      /></a>
+    </div>
+    <div class="contactMe smText">
+      <div class="maxWidth">
+        <h2>Contact Me</h2>
+        <h3>Software developer.</h3>
+        <h3>Knoxville Tn & surrounding areas.</h3>
+        <h3>865-282-7107</h3>
+        <h3>traceton.timmerman@gmail.com</h3>
+        <h3><a href="https://github.com/tjcharm">My github.</a></h3>
+
+        <h3>
+          <a href="https://www.linkedin.com/in/traceton-timmerman-011285191"
+            >My LinkedIn.</a
+          >
+        </h3>
+        <h3><a href="https://www.instagram.com/tjcharmz/">My Instagram.</a></h3>
+      </div>
+    </div>
+    <!-- START OF FOOTER OF 1ST PAGE -->
+    <div class="footer smText">
+      <div class="maxWidth">
+        <h3>Website created by Traceton Timmerman, 2020.</h3>
+      </div>
+    </div>
+    <!-- END OF FOOTER OF 1ST PAGE -->
+  </body>
+</html>

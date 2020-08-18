@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../public/assets/style3.css" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Checker</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="resume">
+        <h2><a href="/">Return to Home</a></h2>
+      </div>
+    </div>
+    <div class="body bg1">
+      <div>
+        <!-- example of passing data into the ejs file from serverjs -->
+        <!--  data.userQuery  -->
+
+        <h1>please log in.</h1>
+      </div>
+      <div>
+        <form class="main" method="post" action="/login">
+          <input
+            id="username"
+            name="username"
+            placeholder="Username"
+            autocomplete="off"
+          />
+          <input
+            id="password"
+            type="password"
+            name="password"
+            placeholder="Password"
+            autocomplete="off"
+          />
+          <input id="login" type="submit" value="Login" />
+          <a href="/createAccount" id="createAccount">Create Account</a>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

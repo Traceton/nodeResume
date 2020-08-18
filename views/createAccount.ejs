@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../public/assets/style3.css" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="resume">
+        <h2><a href="/">Return to Home</a></h2>
+      </div>
+    </div>
+    <div class="body bg1">
+      <div>
+        <h1>please create a account.</h1>
+      </div>
+      <div>
+        <form method="post" class="main" action="/createAccount">
+          <input
+            id="createUsername"
+            name="username"
+            placeholder="Create Username"
+            autocomplete="off"
+            required
+          />
+          <input
+            id="createPassword"
+            type="password"
+            name="password"
+            placeholder="Create Password"
+            autocomplete="off"
+            required
+          />
+          <!-- <input
+            id="verifyPassword"
+            type="text"
+            placeholder="Re-Enter Password"
+            autocomplete="off"
+          /> -->
+          <input
+            id="createAccount"
+            type="submit"
+            value="Click to Create Account"
+          />
+        </form>
+        <a href="/login" id="login">Login</a>
+      </div>
+    </div>
+  </body>
+</html>

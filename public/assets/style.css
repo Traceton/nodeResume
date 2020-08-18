@@ -1,0 +1,356 @@
+* {
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100vh;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+h1 {
+  margin: 0;
+}
+hr {
+  height: 5px;
+  max-width: 20em;
+  border-width: 0;
+  color: rgb(80, 80, 80);
+  background-color: black;
+}
+a {
+  text-decoration: none;
+}
+
+/* START CLASSES */
+.mont {
+  font-family: "Montserrat", sans-serif;
+}
+.fatFace {
+  font-family: "Abril Fatface", cursive;
+}
+/* END CLASSES */
+
+/* START MEDIA QUERIES */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .navBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background-color: white;
+    color: black;
+    /* opacity: 0.7; */
+    position: relative;
+  }
+
+  form input {
+    width: min-content;
+    margin: 0.5em;
+    background-color: white;
+    border: none;
+    font-size: 2.5vh;
+    font-weight: lighter;
+    font-family: "Montserrat", sans-serif;
+  }
+  div h2 {
+    margin: 0.5em;
+    font-weight: lighter;
+  }
+
+  .navBar a {
+    color: rgb(0, 0, 0);
+    /* padding: 14px 16px; */
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    display: flex;
+  }
+
+  .intro {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .maxClear {
+    max-width: 20em;
+    background-color: #ffffff;
+    opacity: 0.6;
+  }
+  div.maxClear h1 {
+    color: black;
+  }
+  div.maxClear h3 {
+    color: black;
+  }
+  .maxWidth {
+    max-width: 20em;
+  }
+  .main {
+    overflow: hidden;
+    color: black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  #toDoImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 20em;
+    border-radius: 8%;
+    margin-bottom: 2em;
+  }
+  #CTSImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 20em;
+    border-radius: 8%;
+    margin-bottom: 2em;
+  }
+
+  #speedBallImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 20em;
+    border-radius: 8%;
+    margin-bottom: 2em;
+  }
+  #loginCheckerImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 20em;
+    border-radius: 8%;
+    margin-bottom: 2em;
+  }
+  .value {
+    overflow: hidden;
+    color: black;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .references {
+    overflow: hidden;
+    color: black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .aboutMe {
+    overflow: hidden;
+    color: black;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .contactMe {
+    overflow: hidden;
+    color: black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .footer {
+    overflow: hidden;
+    color: black;
+    background-color: gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 4em;
+  }
+}
+@media only screen and (min-width: 600px) {
+  #hamburger {
+    display: none;
+  }
+
+  .navBar {
+    overflow: hidden;
+    background-color: white;
+    text-align: center;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    display: flex;
+  }
+  form input {
+    width: min-content;
+    margin: 0.5em;
+    background-color: white;
+    border: none;
+    font-size: 2.5vh;
+    font-weight: lighter;
+    font-family: "Montserrat", sans-serif;
+  }
+  form input:hover {
+    color: blue;
+  }
+  div h2 {
+    margin: 0.5em;
+    font-weight: lighter;
+  }
+
+  .navBar a {
+    color: rgb(0, 0, 0);
+    /* padding: 14px 16px; */
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    display: flex;
+  }
+
+  .navBar a:hover {
+    background-color: 131313;
+    color: black;
+  }
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .maxClear {
+    max-width: 50em;
+    background-color: #ffffff;
+    opacity: 0.6;
+  }
+  div.maxClear h1 {
+    color: black;
+  }
+  div.maxClear h3 {
+    color: black;
+  }
+  .maxWidth {
+    max-width: 30em;
+  }
+  .main {
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  #toDoImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 25em;
+    border-radius: 8%;
+    margin-bottom: 2em;
+  }
+  #CTSImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 25em;
+    border-radius: 8%;
+    margin-bottom: 2em;
+  }
+
+  #speedBallImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 25em;
+    border-radius: 8%;
+    margin-bottom: 2em;
+  }
+  #loginCheckerImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 25em;
+    border-radius: 8%;
+    margin-bottom: 2em;
+  }
+
+  .value {
+    overflow: hidden;
+    color: black;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .references {
+    overflow: hidden;
+    color: black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .aboutMe {
+    overflow: hidden;
+    color: black;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .footer {
+    overflow: hidden;
+    color: black;
+    background-color: gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 3em;
+  }
+  .contactMe {
+    overflow: hidden;
+    color: black;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* END MEDIA QUERIES */

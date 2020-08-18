@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../public/assets/style.css" />
+    <link rel="stylesheet" href="../public/assets/style2.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About this site</title>
+  </head>
+  <body>
+    <!-- START NAVBAR -->
+    <div class="navBar">
+      <h2><a href="/">Home</a></h2>
+      <% if (data.username == "") { %>
+      <h2><a href="/login">Login</a></h2>
+      <h2><a href="/createAccount">Create Account</a></h2>
+
+      <% } %> <% if (data.username != "") { %>
+      <form class="main" method="post" action="/logout">
+        <input id="logout" type="submit" value="<%= data.username %>" />
+      </form>
+      <% } %>
+    </div>
+    <!-- END NAVBAR -->
+    <!-- START INTRO OF 1ST PAGE -->
+    <div id="Home" class="bg4 intro">
+      <div class="whiteText maxClear">
+        <h1 class="fatFace xxlText">About this resume app</h1>
+        <h3 class="mdText">
+          This resume is made with node, hosted on heroku. it uses a basic user
+          authentication.
+        </h3>
+      </div>
+      <div class="blackText"></div>
+    </div>
+    <!-- END INTRO OF 1ST PAGE -->
+  </body>
+</html>

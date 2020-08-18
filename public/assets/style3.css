@@ -1,0 +1,173 @@
+html,
+body {
+  background-color: black;
+  color: white;
+  font-family: "Bebas Neue", cursive;
+  box-sizing: border-box;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: green;
+}
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 8%;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border: none;
+  font-family: "Bebas Neue", cursive;
+}
+#createAccount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 8%;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border: none;
+  font-family: "Bebas Neue", cursive;
+}
+#login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 8%;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border: none;
+  font-family: "Bebas Neue", cursive;
+}
+
+@media only screen and (max-width: 600px) {
+  input {
+    background-color: black;
+    color: white;
+    border: none;
+    margin: 0.5em;
+    font-size: 1.8vh;
+    width: 15em;
+    height: 2.5em;
+  }
+  #createAccount {
+    background-color: black;
+    color: white;
+    border: none;
+    margin: 0.5em;
+    font-size: 1.8vh;
+    width: 15em;
+    height: 2.5em;
+  }
+  #login {
+    background-color: black;
+    color: white;
+    border: none;
+    margin: 0.5em;
+    font-size: 1.8vh;
+    width: 15em;
+    height: 2.5em;
+  }
+  .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .bg1 {
+    /* The image used */
+    background-image: url("../photos/stairs.jpeg");
+    /* Full height */
+    height: 100vh;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .resume {
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  input {
+    background-color: black;
+    color: white;
+    border: none;
+    margin: 0.5em;
+    font-size: 1.8vh;
+    width: 15em;
+    height: 2.5em;
+  }
+  #createAccount {
+    background-color: black;
+    color: white;
+    border: none;
+    margin: 0.5em;
+    font-size: 1.8vh;
+    width: 15em;
+    height: 2.5em;
+  }
+  #login {
+    background-color: black;
+    color: white;
+    border: none;
+    margin: 0.5em;
+    font-size: 1.8vh;
+    width: 15em;
+    height: 2.5em;
+  }
+  .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .bg1 {
+    /* The image used */
+    background-image: url("../photos/stairs.jpeg");
+    /* Full height */
+    height: 100vh;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .resume {
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
