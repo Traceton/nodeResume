@@ -3,7 +3,6 @@ const express = require("express");
 const session = require("express-session");
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
-const cors = require("cors");
 const { urlencoded } = require("express");
 const server = express();
 const database = mongoose.connection;
@@ -24,7 +23,6 @@ database.once("open", () => {
   console.log("connected to mongoDB database");
 });
 
-server.use(cors());
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 server.use("/public", express.static("public"));
