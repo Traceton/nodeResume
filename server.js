@@ -28,7 +28,7 @@ server.use(express.urlencoded({ extended: true }));
 server.use("/public", express.static("public"));
 server.set("view engine", "ejs");
 server.use("/", (req, res, next) => {
-  res.set("credentials", "include");
+  res.set("credentials", "true");
   res.set("Access-Control-Allow-Credentials", true);
   res.set("Access-Control-Allow-Origin", "*");
   res.set("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
