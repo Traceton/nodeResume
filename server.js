@@ -47,9 +47,9 @@ server.use(
     saveUninitialized: false,
     secret: process.env.SESSION_SECRET,
     cookie: {
-      httpOnly: true,
+      httpOnly: false,
       maxAge: ONE_HOUR,
-      sameSite: "none",
+      sameSite: "strict",
       secure: CURRENT_ENV,
     },
   })
