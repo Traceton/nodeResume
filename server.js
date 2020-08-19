@@ -46,8 +46,9 @@ server.use(
     resave: false,
     saveUninitialized: false,
     secret: process.env.SESSION_SECRET,
+    proxy: true,
     cookie: {
-      httpOnly: false,
+      httpOnly: true,
       maxAge: ONE_HOUR,
       sameSite: "strict",
       secure: CURRENT_ENV,
