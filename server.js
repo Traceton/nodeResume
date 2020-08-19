@@ -146,30 +146,17 @@ server.get("/createAccount", async (req, res) => {
 });
 
 // post user login.
-server.post("/login", findUsers, checkIfExists, async (req, res) => {
+server.post("/login", findUsers, checkIfExists, (req, res) => {
   const users = req.session.users;
   if (req.session.exists) {
     for (const user in users) {
       bcrypt.compare(req.body.password, users[user].password, (err, result) => {
         if (result == true && req.body.username == users[user].username) {
           req.session.userId = req.body.username;
-          const userId = req.session.userId;
           req.session.save(function (err) {
-            console.log(`${userId} logged in`);
+            // session saved
+            res.redirect("/");
           });
-          if (userId) {
-            res.render("home", {
-              data: {
-                username: userId,
-              },
-            });
-          } else if (!userId) {
-            res.render("home", {
-              data: {
-                username: "",
-              },
-            });
-          }
         } else if (err) {
           console.log(err);
         } else {
@@ -197,24 +184,10 @@ server.post("/createAccount", findUsers, checkIfExists, (req, res) => {
       try {
         if (!req.session.exists) {
           req.session.userId = user.username;
-          const userId = req.session.userId;
           user.save();
           req.session.save(function (err) {
             console.log(`${user.username} created a account`);
-            if (userId) {
-              console.log(`${userId} logged in`);
-              res.render("home", {
-                data: {
-                  username: userId,
-                },
-              });
-            } else if (!userId) {
-              res.render("home", {
-                data: {
-                  username: "",
-                },
-              });
-            }
+            res.redirect("/");
           });
         } else {
           console.log("username already exists");
