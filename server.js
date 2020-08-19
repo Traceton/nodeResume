@@ -27,6 +27,17 @@ server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 server.use("/public", express.static("public"));
 server.set("view engine", "ejs");
+server.use("/", (req, res, next) => {
+  res.set("credentials", "include");
+  res.set("Access-Control-Allow-Credentials", true);
+  res.set("Access-Control-Allow-Origin", "*");
+  res.set("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
+  res.set(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With,x-api-key,X-HTTP-Method-Override, Content-Type, Accept"
+  );
+  next();
+});
 
 server.use(
   session({
