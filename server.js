@@ -3,7 +3,6 @@ const express = require("express");
 const session = require("express-session");
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
-const { urlencoded } = require("express");
 const server = express();
 const database = mongoose.connection;
 const MongoStore = require("connect-mongo")(session);
