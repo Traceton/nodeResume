@@ -27,25 +27,14 @@ server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 server.use("/public", express.static("public"));
 server.set("view engine", "ejs");
-// server.use("/", (req, res, next) => {
-//   res.set("credentials", "include");
-//   res.set("Access-Control-Allow-Credentials", true);
-//   res.set("Access-Control-Allow-Origin", "*");
-//   res.set("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
-//   res.set(
-//     "Access-Control-Allow-Headers",
-//     "Origin, X-Requested-With,x-api-key,X-HTTP-Method-Override, Content-Type, Accept"
-//   );
-//   next();
-// });
-server.use(function (req, res, next) {
+server.use("/", (req, res, next) => {
   res.set("credentials", "include");
   res.set("Access-Control-Allow-Credentials", true);
-  res.set("Access-Control-Allow-Origin", req.headers.origin);
+  res.set("Access-Control-Allow-Origin", "*");
   res.set("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
   res.set(
     "Access-Control-Allow-Headers",
-    "X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept"
+    "Origin, X-Requested-With,x-api-key,X-HTTP-Method-Override, Content-Type, Accept"
   );
   next();
 });
@@ -60,7 +49,7 @@ server.use(
     cookie: {
       httpOnly: true,
       maxAge: ONE_HOUR,
-      sameSite: "strict",
+      sameSite: "none",
       secure: CURRENT_ENV,
     },
   })
