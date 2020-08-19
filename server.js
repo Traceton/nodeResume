@@ -28,7 +28,7 @@ server.use(express.urlencoded({ extended: true }));
 server.use("/public", express.static("public"));
 server.set("view engine", "ejs");
 server.use("/", (req, res, next) => {
-  res.set("credentials", "true");
+  res.set("credentials", "include");
   res.set("Access-Control-Allow-Credentials", true);
   res.set("Access-Control-Allow-Origin", "*");
   res.set("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
@@ -152,8 +152,10 @@ server.post("/login", findUsers, checkIfExists, (req, res) => {
       bcrypt.compare(req.body.password, users[user].password, (err, result) => {
         if (result == true && req.body.username == users[user].username) {
           req.session.userId = req.body.username;
-          req.session.save();
-          res.redirect("/");
+          req.session.save(function (err) {
+            // session saved
+            res.redirect("/");
+          });
         } else if (err) {
           console.log(err);
         } else {
@@ -182,9 +184,10 @@ server.post("/createAccount", findUsers, checkIfExists, (req, res) => {
         if (!req.session.exists) {
           req.session.userId = user.username;
           user.save();
-          req.session.save();
-          console.log(`${user.username} created a account`);
-          res.redirect("/");
+          req.session.save(function (err) {
+            console.log(`${user.username} created a account`);
+            res.redirect("/");
+          });
         } else {
           console.log("username already exists");
           res.redirect("/login");
