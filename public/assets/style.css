@@ -103,6 +103,14 @@ a {
     align-items: center;
     text-align: center;
   }
+  #reactEcommerce {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 20em;
+    border-radius: 8%;
+    margin-bottom: 2em;
+  }
   #toDoImg {
     display: flex;
     justify-content: center;
@@ -264,6 +272,14 @@ a {
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+  #reactEcommerce {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 25em;
+    border-radius: 8%;
+    margin-bottom: 2em;
   }
   #toDoImg {
     display: flex;
